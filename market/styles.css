@@ -1,0 +1,37 @@
+.container{
+    display: flex;
+    justify-content: center;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    border-bottom: 1px solid gray;
+}
+
+.header_icon{
+    display: flex;
+}
+
+.right_icon{
+    display: flex;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.home_icon{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mainimage{
+    height:500px;
+}
