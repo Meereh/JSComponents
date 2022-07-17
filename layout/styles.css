@@ -2,7 +2,7 @@
   position: absolute;
   margin: auto;
   height: 100vh;
-  width: 600px;
+  width: 620px;
   top: 0;
   bottom: 0;
   left: 0;
@@ -10,12 +10,20 @@
   border: 1px solid red;
 }
 
-.header_icon {
-  display: flex;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#header_icon {
+  line-height: 46px;
+  vertical-align: middle;
+  margin-right: 5px;
 }
 
 .text {
   display: flex;
+  text-align: center;
 }
 
 .right_icon {
@@ -23,23 +31,28 @@
 }
 .home_icon {
   display: flex;
-  justify-content: flex-start;
+}
+
+.header {
+  border-bottom: 1px solid gray;
 }
 
 .header_contents {
   display: flex;
   justify-content: space-between;
   height: 46px;
-  border: 1px solid blue;
+  /*border-bottom: 1px solid blue;*/
+  margin: 0 15px 0 15px;
 }
 
 .main_content {
   dispaly: flex;
   border: 1px solid blueviolet;
+  margin-top: 10px;
 }
 
 .imageslider {
-  text-align: center;
+  margin: 0 auto;
 }
 
 .top_content {
@@ -47,11 +60,25 @@
 }
 
 .left_content {
+  width: 90%;
   border: 1px solid orange;
-  justify-content: flex-start;
 }
 
 .right_content {
+  width: 10%;
   border: 1px solid green;
-  justify-content: flex-end;
+}
+
+.bottom_content {
+  border: 1px solid yellow;
+  position: fixed;
+  bottom: 0;
+}
+
+.buy_btn {
+  width: 620px;
+  height: 52px;
+  border: 0;
+  color: white;
+  background-color: red;
 }
