@@ -14,6 +14,7 @@
 
 ### TODO LIST
 ## 중앙에 위치
+```
 .container{
     border: 1px solid brown;
     display: flex;
@@ -21,7 +22,9 @@
     align-items: center;
     min-height: 100vh;
 }
+```
 
+```
 .container{
     border: 1px solid brown;
     position: fixed;
@@ -29,6 +32,32 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+```
+
+
+```
+body {
+    width: 100%;
+    height: 100vh;
+  }
+
+.wrap{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.keys {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+}
+```
 
 ## 새로운 div element 만들기
 <pre>
@@ -65,3 +94,36 @@ e.target.className == 'todo_edit_confirm_button'
 e.target.classList.contains('todo_recommend_button')
 </pre>
 </code>
+
+
+### DRUM
+## keycode
+https://keycode.info/
+
+## 3x3 box
+```
+<div>
+<div>
+<div>
+
+<break>
+
+<div>
+<div>
+<div>
+
+<break>
+
+
+.break {
+    width: 100%;
+    height: 0;
+  }
+
+```
+
+
+## keycode값 가져오기
+```
+const keycode = e.keyCode;
+```
