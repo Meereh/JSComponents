@@ -52,3 +52,16 @@ const renderAll = (data) => {
 }
 </code>
 </pre>
+
+
+
+## element 찾기
+<pre>
+<code>
+const $item = e.target.closest('.item')
+const $label = $item.querySelector('label')
+const $editInput = $item.querySelector('input[type="text"]')
+e.target.className == 'todo_edit_confirm_button'
+e.target.classList.contains('todo_recommend_button')
+</pre>
+</code>
