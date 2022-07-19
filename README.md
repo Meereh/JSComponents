@@ -155,3 +155,36 @@ https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent
     }
   }
 ```
+
+
+## Baseball
+### input (number)
+```
+    <input
+        type="number"
+        id="question"
+        name="question"
+        min="0"
+        max="9999"
+        size="4"
+        class="ball_input"
+    />
+```
+
+### calc
+
+### 가상요소
+##### – 가상클래스(Pseudo-Class)는,별도의 class를 지정하지 않아도 지정한 것 처럼요소를 선택할 수 있습니다.
+##### – 가상요소(Pseudo-Element)는, 가상클래스처럼 선택자(selector)에 추가되며,
+##### 존재하지 않는 요소를 존재하는 것처럼 부여하여 문서의 특정 부분 선택이 가능합니다.
+
+#### ::before/ ::after 쓸 땐 content 속성 꼭 필요!!!
+
+#### ::before
+##### 요소의 콘텐츠 시작부분에 생성된 콘텐츠 추가
+##### 실제 내애ㅛㅇ 바로 앞에서 생성되는 자식요소
+
+#### ::after
+##### 요소의 콘텐츠 끝부분에 생성된 콘텐츠 추가
+##### 실제 내용 바로 뒤에서 생성되는 자식요소
+
