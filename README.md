@@ -31,13 +31,17 @@
 }
 
 ## 새로운 div element 만들기
-```
+<pre>
+<code>
 const $todoItem = document.createElement('div');
 $todoItem.classList.add('todoItem');
 $todoItem.dataset.id = id;
 $todoItem.innerHTML = ` `;
-```
-```
+</code>
+</pre>
+
+<pre>
+<code>
 const renderAll = (data) => {
     $todoList.innerHTML = ''
     data.forEach((item)=>{
@@ -46,4 +50,5 @@ const renderAll = (data) => {
     })
 
 }
-```
+</code>
+</pre>
