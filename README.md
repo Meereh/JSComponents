@@ -2,7 +2,7 @@
 [참고 페이지] (https://store.kakaofriends.com/products/7223)
 
 ## fontawesome
-# head에 추가
+### head에 추가
 (https://fontawesome.com)
 
 
@@ -12,8 +12,8 @@
     />
 
 
-### TODO LIST
-## 중앙에 위치
+## TODO LIST
+### 중앙에 위치
 ```
 .container{
     border: 1px solid brown;
@@ -59,7 +59,7 @@ body {
 }
 ```
 
-## 새로운 div element 만들기
+### 새로운 div element 만들기
 <pre>
 <code>
 const $todoItem = document.createElement('div');
@@ -84,7 +84,7 @@ const renderAll = (data) => {
 
 
 
-## element 찾기
+### element 찾기
 <pre>
 <code>
 const $item = e.target.closest('.item')
@@ -96,11 +96,11 @@ e.target.classList.contains('todo_recommend_button')
 </code>
 
 
-### DRUM
-## keycode
+## DRUM
+### keycode
 https://keycode.info/
 
-## 3x3 box
+### 3x3 box
 ```
 <div>
 <div>
@@ -123,7 +123,35 @@ https://keycode.info/
 ```
 
 
-## keycode값 가져오기
+### keycode값 가져오기
 ```
 const keycode = e.keyCode;
+```
+
+### class 이름 추가
+```
+
+const $key = document.querySelector(`div[data-key="${keycode}"]`)
+
+$key.classList.add('playing')
+```
+
+### 확대
+```
+transform: scale(1.1);
+```
+
+### TransitionEvent
+
+https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent
+
+- transitionEvent가 끝날 때 발생
+
+```
+//transform이라는 css 끝나면 ~ class이름에서 'playing'제거
+ const onTransitionEnd = (e) => {
+    if (e.propertyName === 'transform') {
+      e.target.classList.remove('playing')
+    }
+  }
 ```
