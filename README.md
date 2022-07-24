@@ -204,6 +204,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent
 
 ##### 실제 내용 바로 뒤에서 생성되는 자식요소
 
+<<<<<<< HEAD
 ## Modal-popup
 
 ### toggle
@@ -261,3 +262,41 @@ body.scroll_lock {
   height: 100%;
 }
 ```
+=======
+
+
+## Youtube
+### <input><label> 연결
+```
+//웹접근성 때문에 사용
+<label for="name">
+<input type="text" id="name>
+```
+### label 태그의 역할
+label태그가 하는 일은 input 태그를 제어하여 상태값을 변경하도록 돕습니다. 이는 input 태그만으로 선택하기 어렵거나 더 좋은 사용자 경험을 제공하기 위한 용도이며 만약 label이 없이 input 태그만 클릭하여 선택하는 경우를 생각해보세요. input 태그 자체는 영역이 작아 클릭하기 어렵거나 서로 다른 위치의 input 태그를 제어하려면 부득히 복잡한 스크립트를 사용해야할 수도 있죠. label 태그는 이런 점으로부터 자유롭고 매우 편리하게 사용할 수 있는 방법입니다.
+
+### <picture></picture>
+
+### <figcaption></figcaption>
+
+
+### SEO 검색엔진 처리
+```
+<main>
+    <h2 class="blind">유튜브 콘텐츠</h2>
+</main>
+
+
+.blind{
+    text-indent: -99999px;
+    overflow: hidden;
+}
+```
+
+### hover시 밝게
+```
+.content figure picture:hover{
+    filter: brightness(1.2)
+}
+```
+>>>>>>> f1c1b2dfb4d00afa08c9fef414404ebb4b67e9fa
