@@ -1,8 +1,11 @@
 # JSComponents
+
 [참고 페이지] (https://store.kakaofriends.com/products/7223)
 
 ## fontawesome
+
 ### head에 추가
+
 (https://fontawesome.com)
 
 ```
@@ -13,7 +16,9 @@
 ```
 
 ## TODO LIST
+
 ### 중앙에 위치
+
 ```
 .container{
     border: 1px solid brown;
@@ -33,7 +38,6 @@
     transform: translate(-50%, -50%);
 }
 ```
-
 
 ```
 body {
@@ -60,6 +64,7 @@ body {
 ```
 
 ### 새로운 div element 만들기
+
 <pre>
 <code>
 const $todoItem = document.createElement('div');
@@ -82,9 +87,8 @@ const renderAll = (data) => {
 </code>
 </pre>
 
-
-
 ### element 찾기
+
 <pre>
 <code>
 const $item = e.target.closest('.item')
@@ -95,12 +99,14 @@ e.target.classList.contains('todo_recommend_button')
 </pre>
 </code>
 
-
 ## DRUM
+
 ### keycode
+
 https://keycode.info/
 
 ### 3x3 box
+
 ```
 <div>
 <div>
@@ -122,13 +128,14 @@ https://keycode.info/
 
 ```
 
-
 ### keycode값 가져오기
+
 ```
 const keycode = e.keyCode;
 ```
 
 ### class 이름 추가
+
 ```
 
 const $key = document.querySelector(`div[data-key="${keycode}"]`)
@@ -137,6 +144,7 @@ $key.classList.add('playing')
 ```
 
 ### 확대
+
 ```
 transform: scale(1.1);
 ```
@@ -156,9 +164,10 @@ https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent
   }
 ```
 
-
 ## Baseball
+
 ### input (number)
+
 ```
     <input
         type="number"
@@ -174,17 +183,81 @@ https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent
 ### calc
 
 ### 가상요소
+
 ##### – 가상클래스(Pseudo-Class)는,별도의 class를 지정하지 않아도 지정한 것 처럼요소를 선택할 수 있습니다.
+
 ##### – 가상요소(Pseudo-Element)는, 가상클래스처럼 선택자(selector)에 추가되며,
+
 ##### 존재하지 않는 요소를 존재하는 것처럼 부여하여 문서의 특정 부분 선택이 가능합니다.
 
 #### ::before/ ::after 쓸 땐 content 속성 꼭 필요!!!
 
 #### ::before
+
 ##### 요소의 콘텐츠 시작부분에 생성된 콘텐츠 추가
+
 ##### 실제 내애ㅛㅇ 바로 앞에서 생성되는 자식요소
 
 #### ::after
+
 ##### 요소의 콘텐츠 끝부분에 생성된 콘텐츠 추가
+
 ##### 실제 내용 바로 뒤에서 생성되는 자식요소
 
+## Modal-popup
+
+### toggle
+
+https://developer.mozilla.org/ko/docs/Web/API/Element/classList
+
+- 하나의 설정 값으로부터 다른 값으로 전환
+
+### Scroll Lock
+
+```
+body.scroll_lock {
+  overflow: hidden;
+  height: 100%;
+}
+```
+
+### div box들 ... 중앙위치
+
+```
+<div class="box"></div>
+...
+.box {
+  width: 600px;
+  height: 400px;
+  margin: 16px auto;
+  background-color: #123;
+}
+```
+
+```
+<button class="btn">BUTTON</button>
+...
+.btn {
+  width: 180px;
+  height: 60px;
+  margin: 0 auto;
+  display: block;
+}
+```
+
+### 수평가로줄 <hr/>
+
+### 배경 불투명하게
+
+```
+background-color: rgb(0 0 0 / 50%);
+```
+
+### scroll lock
+
+```
+body.scroll_lock {
+  overflow: hidden;
+  height: 100%;
+}
+```
