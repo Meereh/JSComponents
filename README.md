@@ -204,7 +204,7 @@ https://developer.mozilla.org/en-US/docs/Web/API/TransitionEvent
 
 ##### 실제 내용 바로 뒤에서 생성되는 자식요소
 
-<<<<<<< HEAD
+
 ## Modal-popup
 
 ### toggle
@@ -299,4 +299,3 @@ label태그가 하는 일은 input 태그를 제어하여 상태값을 변경하
     filter: brightness(1.2)
 }
 ```
->>>>>>> f1c1b2dfb4d00afa08c9fef414404ebb4b67e9fa

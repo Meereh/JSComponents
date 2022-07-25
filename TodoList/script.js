@@ -5,12 +5,67 @@
     const get = (target) => {
         return document.querySelector(target);
     }
+    const getAll = (target) => {
+        return document.querySelectorAll(target)
+      }
 
     const $todoList = get('.content');
     const $todoinput = get('.todoinput');
     const $submit_btn = get('.submit_btn');
     const $todo_header = get('.todo_header');
+    const $pagination = get('.pagination')
     const url = `http://localhost:3000/todos`;
+
+    let currentPage = 1
+    const totalCount = 53
+    const pageCount = 5
+    const limit = 5
+
+    const pagination = () => {
+        let totalPage = Math.ceil(totalCount / limit)
+        let pageGroup = Math.ceil(currentPage / pageCount)
+        let lastNumber = pageGroup * pageCount
+        if (lastNumber > totalPage) {
+          lastNumber = totalPage
+        }
+        let firstNumber = lastNumber - (pageCount - 1)
+    
+        const next = lastNumber + 1
+        const prev = firstNumber - 1
+    
+        let html = ''
+    
+        if (prev > 0) {
+          html += "<button class='prev' data-fn='prev'>이전</button> "
+        }
+    
+        for (let i = firstNumber; i <= lastNumber; i++) {
+          html += `<button class="pageNumber" id="page_${i}">${i}</button>`
+        }
+        if (lastNumber < totalPage) {
+          html += `<button class='next' data-fn='next'>다음</button>`
+        }
+    
+        $pagination.innerHTML = html
+        const $currentPageNumber = get(`.pageNumber#page_${currentPage}`)
+        $currentPageNumber.style.color = '#9dc0e8'
+    
+        const $currentPageNumbers = getAll(`.pagination button`)
+        $currentPageNumbers.forEach((button) => {
+          button.addEventListener('click', () => {
+            if (button.dataset.fn === 'prev') {
+              currentPage = prev
+            } else if (button.dataset.fn === 'next') {
+              currentPage = next
+            } else {
+              currentPage = button.innerText
+            }
+            pagination()
+            getTodos()
+          })
+        })
+      }
+    
 
     const createTodoItem = (data) => {
         const  {id, content, recommended, completed} = data;
@@ -67,11 +122,18 @@
 
     }
 
-    const getTodos = async() => {
-        let response = await fetch(url);
-        let data =  await response.json();
-        console.log(data);
-        renderAll(data);
+    const getTodos = () => {
+        fetch(`${url}?_page=${currentPage}&_limit=${limit}`)
+        .then((response) => response.json())
+        .then((todos) => {
+            renderAll(todos)
+        })
+        .catch((error) => console.error(error.message))
+
+        // let response = await fetch(url);
+        // let data =  await response.json();
+        // console.log(data);
+        // renderAll(data);
     };
 
     const inputTodo = async(e) => {
@@ -256,6 +318,7 @@
     const init = () => {
         window.addEventListener('DOMContentLoaded', ()=>{
             getTodos();
+            pagination();
         })
 
         $todo_header.addEventListener('submit', inputTodo);
