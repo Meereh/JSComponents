@@ -299,3 +299,17 @@ label태그가 하는 일은 input 태그를 제어하여 상태값을 변경하
     filter: brightness(1.2)
 }
 ```
+
+## Stopwatch
+### setTimeout, setInterval
+
+- 일정 시간이 지난 후 원하는 함수를 실행할 수 있게 하는 메서드
+
+#### setTimeout 과 setInterval의 차이
+
+- setTimeout
+  - https://developer.mozilla.org/ko/docs/Web/API/setTimeout
+  - 일정 시간 간격 이후에 함수가 한번 실행
+- setInterval
+  - https://developer.mozilla.org/en-US/docs/Web/API/setInterval
+  - 일정 시간 간격으로 함수가 주기적으로 실행
