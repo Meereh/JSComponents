@@ -46,7 +46,6 @@ a {
 }
 
 .main_content {
-  display: flex;
   border: 1px solid blueviolet;
   margin-top: 10px;
 }
@@ -82,3 +81,55 @@ a {
   color: white;
   background-color: red;
 }
+
+
+/* Dropdown Button */
+
+.dropbtn,
+.dropbtn1 {
+    width: 620px;
+    background-color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .text{
+    color: black;
+  }
+  
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
+
+
+  .dropItem{
+    width: 620px;
+    background-color: blue;
+  }
